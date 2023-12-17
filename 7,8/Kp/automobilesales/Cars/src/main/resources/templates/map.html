@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Мы на карте</title>
+</head>
+<head th:insert="blocks/head :: head"></head>
+<body>
+<div th:insert="blocks/nav :: nav"></div>
+
+<h1 class="text-center text-white d-none d-lg-block site-heading"
+    style="margin-top: 0;padding-top: 80px;position: relative;text-shadow: 0 0 20px var(--bs-black);">
+    <span class="fw-semibold site-heading-lower">Мы на карте</span>
+</h1>
+<section class="page-section clearfix" style="position: relative;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <iframe allowfullscreen="" frameborder="0" loading="lazy"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGz6HJDVY9fht_jGVCprEpRCwZ8PSsqhc&amp;q=Minsk&amp;zoom=11"
+                        width="100%" height="700"
+                        style="box-shadow: 0px 0px 6px;border-radius: 5px;border: 1px solid rgb(255,255,255);width: 100%;margin-top: 15px;height: 500px;"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="/js/current-day.js"></script>
+<script src="/js/Lightbox-Gallery.js"></script>
+</body>
+
+</html>

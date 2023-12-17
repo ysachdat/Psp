@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Статистика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <!-- Ваши стили -->
+    <style>
+        body {
+            background-color: var(--bs-secondary);
+            color: var(--bs-light);
+        }
+
+        .page-section {
+            background-color: var(--bs-dark);
+            color: var(--bs-light);
+        }
+
+        .statistics-block {
+            background-color: var(--bs-faded);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .statistics-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--bs-primary); /* Синий цвет */
+        }
+
+        .statistics-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: var(--bs-light); /* Светло-серый фон таблицы */
+            color: var(--bs-dark); /* Темный цвет текста */
+        }
+
+        .statistics-table th, .statistics-table td {
+            border: 1px solid var(--bs-primary); /* Линии ячеек */
+            padding: 8px;
+            text-align: center;
+        }
+
+        .statistics-table th {
+            background-color: var(--bs-primary); /* Синий цвет фона заголовков */
+            color: var(--bs-light); /* Светлый цвет текста заголовков */
+        }
+
+        .statistics-table td {
+            background-color: var(--bs-white); /* Белый цвет фона ячеек */
+        }
+
+        .statistics-item {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div th:insert="blocks/nav :: nav"></div>
+<h1 class="text-center text-white d-none d-lg-block site-heading"
+    style="position: relative;margin-top: 0px;padding-top: 80px;text-shadow: 0px 0px 20px var(--bs-black);"><span
+        class="fw-semibold site-heading-lower">Статистика</span></h1>
+<section class="page-section clearfix" style="position: relative;">
+    <div class="container">
+        <!-- Блок статистики -->
+        <div class="statistics-block">
+            <h2 class="statistics-title">Статистика продаж</h2>
+            <!-- Таблица для отображения статистики -->
+            <table class="statistics-table">
+                <thead>
+                <tr>
+                    <th>Тип</th>
+                    <th>Количество</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Проданные автомобили</td>
+                    <td th:text="29"></td>
+                </tr>
+                <tr>
+                    <td>Активные объявления</td>
+                    <td th:text="2"></td>
+                </tr>
+                <tr>
+                    <td>Общая прибыль</td>
+                    <td th:text="${sold * 0.15}"></td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- /Таблица -->
+        </div>
+        <!-- /Блок статистики -->
+    </div>
+</section>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="/js/current-day.js"></script>
+<script src="/js/Lightbox-Gallery.js"></script>
+</body>
+</html>
